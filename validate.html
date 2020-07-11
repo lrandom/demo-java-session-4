@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5>Đăng ký</h5>
+    <form onsubmit="return validate()">
+        <div>
+            <label>
+                Fullname
+            </label>
+            <input type="text" name="fullname" id="fullname"/>
+            
+        </div>
+       
+        <div>
+            <label>
+                Username
+            </label>
+            <input type="text" name="username" id="username"/>
+        </div>
+       
+        <div>
+            <label>
+                Password
+            </label>
+            <input type="password" name="password" id="password"/>
+        </div>
+
+        <div>
+            <label>Address</label>
+            <textarea name="address" id="address"></textarea>
+        </div>
+
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+
+<script>
+    function validate(){
+        var fullname = document.getElementById('fullname');
+        var fullnameValue = fullname.value;
+        if(fullnameValue == null || fullnameValue ==''){
+            alert("Vui long dien vao truong fullname");
+            //focus lại vào fullname
+            fullname.focus();
+            return false;
+        }
+
+        var username = document.getElementById('username');
+        var usernameValue = username.value;
+        if(usernameValue == null || usernameValue ==''){
+            alert("Vui long dien vao truong username");
+            return false;
+        }
+
+        return true;
+    }
+</script>
+</html>

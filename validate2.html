@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5>Đăng ký</h5>
+    <form onsubmit="return validate()">
+        <div>
+            <label>
+                Fullname
+            </label>
+            <input type="text" name="fullname" id="fullname" oninput="valid('fullname')"/>
+            
+        </div>
+        <div class="error-message"></div>
+       
+        <div>
+            <label>
+                Username
+            </label>
+            <input type="text" name="username" id="username" oninput="valid('username')"/>
+        </div>
+        <div class="error-message"></div>
+       
+        <div>
+            <label>
+                Password
+            </label>
+            <input type="password" name="password" id="password"/>
+        </div>
+
+        <div>
+            <label>Address</label>
+            <textarea name="address" id="address"></textarea>
+        </div>
+
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+<style>
+    .error-message{
+        color:red;
+    }
+</style>
+<script>
+    var isFullNameValid = false;
+    var isUserNameValid = false;
+    
+    function valid(controlName){
+        console.log("F");
+       switch (controlName) {
+           case 'fullname':
+               //đang muốn kiểm tra fullname
+               let nodeFullName = document.getElementById('fullname');
+               if(nodeFullName.value==null || nodeFullName.value==''){
+                   isFullNameValid = false;
+                   nodeFullName.parentElement.nextElementSibling.innerHTML='Điền vào cho tao';
+               }else{
+                   isFullNameValid = true;
+                   nodeFullName.parentElement.nextElementSibling.innerHTML='';
+               }
+               break;
+
+            case 'username':
+                       //đang muốn kiểm tra fullname
+               let nodeUserName = document.getElementById('username');
+               if(nodeUserName.value==null || nodeUserName.value==''){
+                   isUserNameValid = false;
+                   nodeUserName.parentElement.nextElementSibling.innerHTML='Điền vào cho tao';
+               }else{
+                   isUserNameValid = true;
+                   nodeUserName.parentElement.nextElementSibling.innerHTML='';
+               }
+                break;
+       
+           default:
+               break;
+       }
+    }
+    function validate(){
+       if(isFullNameValid==true && isUserNameValid==true){
+           return true;
+       }
+       return false;
+    }
+</script>
+</html>
