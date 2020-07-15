@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //viết code jquery trong đây
+            //callback function
+            //.html
+            /*console.log($('#demo').html());//<p>Hello các bạn</p>
+            $('#demo').html('<p>Hi các bạn</p>');
+
+            $('#demo').after('<div>demo 2</div>');
+            $('#demo').append('<p>Hello các bạn 2</p>');
+
+            $('img').attr('src'); //test.png
+            $('img').attr('src','link ảnh mới');*/
+
+            $('#demo').click(function(){
+                /*$(this).slideUp(1000,function(){
+                    console.log("Slide up done");
+                });
+
+                $('.slide').slideDown(1000,function(){
+                    console.log("Slide down done");
+                })*/
+                
+                $('.slide').animate({
+                    'background':'#000000',
+                    'width':200+'px',
+                    'height':400+'px'
+                },1000,function(){
+                    console.log("Animated done");
+                });
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <img src="test.png"/>
+    <div id="demo">
+        <p>Hello các bạn</p>
+    </div>
+
+    <div class="slide">
+
+    </div>
+
+    <style>
+        .slide{
+            width:100px;
+            height: 200px;
+            background:red;
+        }
+    </style>
+</body>
+</html>

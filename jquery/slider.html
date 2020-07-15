@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+   <script>
+       $(document).ready(function() {
+           var index =  parseInt($('#slider .inner-preview-container ul li')
+           .length) - 1;//trả về 2
+           $('.btn-next').click(function() {
+               if(index>0){
+                $('#slider .inner-preview-container ul li')
+                .eq(index).hide();
+                //trừ 2 đi 1 đơn vị
+                index -=1;
+               }
+           })
+
+           $('.btn-prev').click(function(){
+               if(index <= (parseInt($('#slider .inner-preview-container ul li')
+           .length) - 2)){
+               index+=1;
+               $('#slider .inner-preview-container ul li')
+                .eq(index).show();
+              }
+           })
+       })
+   </script>
+</head>
+<body>
+    <div id="slider">
+        <div class="inner-preview-container">
+        <ul>
+            <li>
+                <img src="imgs/1.jpeg"/>
+            </li>
+
+            <li>
+                <img src="imgs/2.jpeg"/>
+            </li>
+
+            <li>
+                <img src="imgs/3.jpg"/>
+            </li>
+        </ul>
+        </div>
+
+        <div class="button-container">
+            <button class="btn-prev">Prev</button>
+            <button class="btn-next">Next</button>
+        </div>
+    </div>
+
+    <style>
+        #slider{
+            position: relative;
+            width:800px;
+            height:500px;
+            border:1px solid red;
+        }
+
+        #slider .inner-preview-container{
+            position: relative;
+            width:100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #slider .inner-preview-container ul{
+            margin:0px;
+            padding:0px;
+        }
+
+        #slider .inner-preview-container ul li{
+            position:absolute;
+            list-style: none;
+            top:0px;
+            left:0px;
+            bottom:0px;
+            right:0px;
+        }
+
+        #slider .inner-preview-container ul li img{
+            width:100%;
+            height: 100%;
+        }
+
+
+    </style>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.thumb').click(function(){
+                let src = $(this).attr('src');
+                $('#previews-photo .large-photo img')
+                .attr('src',src);
+            })
+        })
+    </script>
+    </head>
+    <body>
+        <div id="previews-photo">
+            <div class="large-photo">
+                <img src="imgs/1.jpeg">
+            </div>
+
+            <ul>
+            <li>
+                <img class="thumb" src="imgs/1.jpeg">
+            </li>
+            <li>
+                <img class="thumb" src="imgs/2.jpeg">
+            </li>
+            <li>
+                <img class="thumb" src="imgs/3.jpg">
+            </li>
+            </ul>
+        </div>
+    </body>
+
+    <style>
+        #previews-photo ul{
+            padding:0px; 
+            margin:0px; 
+        }
+
+        #previews-photo ul li{
+            float:left;
+        }
+
+        #previews-photo ul li img{
+            width:100px;
+            height: 80px;
+        }
+
+        #previews-photo .large-photo img{
+            width:500px;
+            height: 250px;
+        }
+    </style>
+</html>
