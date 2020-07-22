@@ -114,7 +114,7 @@ ion-icon{
 .wrapper .banner .img-2
 {
    background-size:cover;
-   background-repeat:none;
+   background-repeat:no-repeat;
    height:97.5px;
    width:100%;
 }
@@ -145,7 +145,7 @@ ion-icon{
 
 .highlight .item .icon{
    background-size:contain;
-   background-repeat:none;
+   background-repeat:no-repeat;
    width:40px;
    height:40px;
 }
@@ -175,7 +175,7 @@ ion-icon{
     background-size:contain;
     width: 80px;
     height:80px;
-    background-repeat:none;
+    background-repeat:no-repeat;
 }
 
 .category .inner-category .item h6{
@@ -200,4 +200,82 @@ ion-icon{
     color: #211616a8;
     font-weight: 600;
     font-size: 16px;
+}
+
+.flash-sale {
+    margin-top:15px;
+}
+.flash-sale .preview{
+    position:relative;
+    padding-top:5px;
+    padding-right:15px;
+    padding-left:15px;
+}
+
+.flash-sale .preview .picture{
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+    height:150px;
+}
+
+.flash-sale .preview .badge{
+    position: absolute;
+    top:0px;
+    right:0px;
+}
+
+.flash-sale .preview .badge .badge-content{
+    background: rgba(255,212,36,.9);
+    font-size:18px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.flash-sale .preview .badge .badge-content div:first-child{
+    color:red;
+}
+
+.flash-sale .preview .badge .badge-content div:last-child{
+    color:white;
+    margin-top:2.5px;
+}
+
+.flash-sale .preview .badge:after{
+    content: "";
+    border-width: 24px;
+    border-top-color: transparent;
+    border-left-color: rgba(255,212,36,.9);
+    border-bottom-color: transparent;
+    border-right-color: rgba(255,212,36,.9);
+    border-style: solid;
+    position: absolute;
+    /* left: 0px; */
+    right: 5px;
+    bottom: -7px;
+    border-top-width: 0px;
+    border-bottom-width: 10px;
+}
+
+.flash-sale .item .price{
+   font-size:18px;
+   font-weight: bold;
+   color:red;
+}
+
+.flash-sale .item .sole-count-progress{
+   width:100%;
+   height:15px;
+   position:relative;
+   overflow:hidden;
+   border-radius: 10px;
+   background:#ff572257;
+}
+
+.flash-sale .item .sole-count-progress .inner-progress{
+    height:15px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:10px;
+    background:red;
+    width:20%;
 }
