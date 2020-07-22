@@ -162,4 +162,42 @@ ion-icon{
     overflow: hidden;
     cursor: pointer;
 }
+.category{
+    margin-top:20px;
+}
+.category .inner-category{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.category .inner-category .item .icon{
+    background-size:contain;
+    width: 80px;
+    height:80px;
+    background-repeat:none;
+}
+
+.category .inner-category .item h6{
+    font-size:14px;
+}
+
+.category .inner-category .item{
+    border-bottom:1px solid #cdcdcd38;
+    border-right:1px solid #cdcdcd38;
+}
+
+.category .first-inner-category{
+    border-top:1px solid #cdcdcd38;
+}
+
+.category .inner-category{
+    border-left: 1px solid #cdcdcd38;
+}
+
+.heading{
+    text-transform: uppercase;
+    color: #211616a8;
+    font-weight: 600;
+    font-size: 16px;
+}
